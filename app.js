@@ -13,7 +13,7 @@ const promisifedQuery = promisify(connection.query).bind(connection);
 
 const runQuery = async() => {
     try {
-        let data = await promisifedQuery('SELECT * FROM users');
+        let data = await promisifedQuery('SELECT count(*) as total FROM users');
         return data;
     } catch (error) {
         
