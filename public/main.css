@@ -14,16 +14,38 @@ body {
   .wrapper {
       height: 100vh;
       width: 100vw;
-      background-image: url('./ostrich-4504017_1920.jpg');
-      background-position: center;
-      background-size: cover;
+      overflow: scroll;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .wrapper::before {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.692), rgba(255, 255, 255, 0.445)), url('./ostrich-4504017_1920.jpg');
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
   }
   ​
   h1 {
     font-size: 300%;
     margin: 0;
   }
-  ​
+  
+  .enter-text {
+    font-size: 40px;
+    text-shadow: 2px 2px rgba(255, 255, 255, 0.521);
+  }​
+
   .main {
     display: flex;
     flex-direction: column;
